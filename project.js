@@ -5,3 +5,11 @@
 // 5. Check if the user won
 // 6. Give the user their winnings
 // 7. Play again.
+
+// function deposit() {
+//     return 1
+// }
+
+const deposit = () => {
+    
+}
