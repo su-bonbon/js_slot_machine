@@ -24,4 +24,8 @@ const deposit = () => {
     }
 };
 
+const getNumberofLines = () => {
+
+}
 const depositAmount = deposit();
+console.log(depositAmount);
