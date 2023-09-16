@@ -24,4 +24,4 @@ const deposit = () => {
     }
 };
 
-deposit();
+const depositAmount = deposit();
