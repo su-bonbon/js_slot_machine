@@ -37,6 +37,6 @@ const getNumberofLines = () => {
     }
 }
 
-const depositAmount = deposit();
-const numberofLines = getNumberofLines();
+Let balance = deposit();  //if i use let i can change the value later
+const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
 console.log(depositAmount);
