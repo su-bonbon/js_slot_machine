@@ -37,10 +37,21 @@ const getNumberofLines = () => {
     }
 }
 
-const getBet = (balance => 
-    
-    )
+const getBet = (balance) => {
+    while (true) {
+        const bet = prompt("Enter the total bet: ");
+        const numberBet = parseFloat(bet);
 
-Let balance = deposit();  //if i use let i can change the value later
+        if(isNaN(numberBet) || (numberBet <= 0 ) || (numberBet > balance)) {
+            console.log("Invalid bet, try again.")
+        } else {
+            return numberBet;
+        }
+    }
+}
+
+    
+
+let balance = deposit();  //if i use let i can change the value later
 const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
-console.log(depositAmount);
+const bet = getBet(balance);
