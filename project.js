@@ -21,6 +21,13 @@ const SYMBOLS_COUNT = {
     "D": 8
 }
 
+const SYMBOLS_VALUES = {
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 2
+}
+
 
 
 
@@ -69,6 +76,10 @@ const getBet = (balance, lines) => {
     }
 }
 
+const spin = () => {
+    const symbols = [];
+    
+}
     
 
 let balance = deposit();  //if i use let i can change the value later
