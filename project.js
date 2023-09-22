@@ -15,17 +15,17 @@ const COLS = 3;
 
 //this works as switch cases
 const SYMBOLS_COUNT = {
-    "A": 2,
-    "B": 4,
-    "C": 6,
-    "D": 8
+    A : 2,
+    B : 4,
+    C : 6,
+    D : 8
 }
 
 const SYMBOLS_VALUES = {
-    "A": 5,
-    "B": 4,
-    "C": 3,
-    "D": 2
+    A : 5,
+    B : 4,
+    C : 3,
+    D : 2
 }
 
 
@@ -78,10 +78,12 @@ const getBet = (balance, lines) => {
 
 const spin = () => {
     const symbols = [];
+    for(const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
+        console.log(symbol, count);
+    }
+};
     
-}
-    
-
+spin();
 let balance = deposit();  //if i use let i can change the value later
 const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
 const bet = getBet(balance, numberofLines);
