@@ -78,8 +78,18 @@ const getBet = (balance, lines) => {
 
 const spin = () => {
     const symbols = [];
-    for(const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
-        console.log(symbol, count);
+    for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
+        for (let i = 0; i < count; i++) {
+            symbol.push(symbol);
+        }
+    }
+
+    const reels = [[], [], []];
+    for (let i = 0; i < COLS; i++) {
+        const reelSymbols = [...symbols];
+        for (let j = 0; j < ROWS; j++) {
+            const selectedSymbol = 
+        }
     }
 };
     
