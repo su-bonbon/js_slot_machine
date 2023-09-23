@@ -80,7 +80,7 @@ const spin = () => {
     const symbols = [];
     for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
         for (let i = 0; i < count; i++) {
-            symbol.push(symbol);
+            symbols.push(symbol);
         }
     }
 
@@ -88,13 +88,18 @@ const spin = () => {
     for (let i = 0; i < COLS; i++) {
         const reelSymbols = [...symbols];
         for (let j = 0; j < ROWS; j++) {
-            const randonIndex = Math.floor(Math.random() * reelSymbols.length);
-            const selectedSymbol = reelSymbols[randonIndex];
+            const randomIndex = Math.floor(Math.random() * reelSymbols.length);
+            const selectedSymbol = reelSymbols[randomIndex];
+            reels[i].push(selectedSymbol);
+            reelSymbols.splice(randomIndex, 1);
         }
     }
+
+    return reels;
 };
     
-spin();
+const reels = spin();
+console.log(reels);
 let balance = deposit();  //if i use let i can change the value later
 const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
 const bet = getBet(balance, numberofLines);
