@@ -88,7 +88,8 @@ const spin = () => {
     for (let i = 0; i < COLS; i++) {
         const reelSymbols = [...symbols];
         for (let j = 0; j < ROWS; j++) {
-            const selectedSymbol = 
+            const randonIndex = Math.floor(Math.random() * reelSymbols.length);
+            const selectedSymbol = reelSymbols[randonIndex];
         }
     }
 };
