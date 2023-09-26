@@ -104,7 +104,7 @@ const transpose = (reels) => {
 
     for (let i = 0; i < ROWS; i++) {
         rows.push([]);
-        for (let j = 0l j < COLS; j++) {
+        for (let j = 0; j < COLS; j++) {
             rows[i].push(reels[j][i])
         }
     }
@@ -112,7 +112,6 @@ const transpose = (reels) => {
 }
     
 
-console.log(reels);
 let balance = deposit();  //if i use let i can change the value later
 const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
 const bet = getBet(balance, numberofLines);
