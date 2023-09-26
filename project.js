@@ -98,9 +98,25 @@ const spin = () => {
 
     return reels;
 };
+
+const transpose = (reels) => {
+    const rows = [];
+
+    for (let i = 0; i < ROWS; i++) {
+        rows.push([]);
+        for (let j = 0l j < COLS; j++) {
+            rows[i].push(reels[j][i])
+        }
+    }
+    return rows;
+}
     
-const reels = spin();
+
 console.log(reels);
 let balance = deposit();  //if i use let i can change the value later
 const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
 const bet = getBet(balance, numberofLines);
+const reels = spin();
+const rows = transpose(reels);
+console.log(reels);
+console.log(rows);
