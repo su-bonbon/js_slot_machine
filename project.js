@@ -134,7 +134,11 @@ const getWinnings = (rows, bet, lines) => {
                 break;
             }
         }
+        if (allSame) {
+            winnings += bet * SYMBOLS_VALUES[symbols[0]]
+        }
     }
+    return winnings;
 }
 
 let balance = deposit();  //if i use let i can change the value later
@@ -145,3 +149,5 @@ const rows = transpose(reels);
 console.log(reels);
 console.log(rows);
 printRows(rows);
+const winnings = getWinnings(rows, bet, numberofLines);
+console.log("YOU WON, $" + winnings.toString());
