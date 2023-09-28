@@ -123,6 +123,20 @@ const printRows = (rows) => {
     }
 }
 
+const getWinnings = (rows, bet, lines) => {
+    let winnings = 0;
+    for(let row = 0; row < lines; row++) {
+        const symbols = rows[row];
+        let allSame = true;
+        for (const symbol of symbols) {
+            if (symbol != symbols[0]) {
+                allSame = false;
+                break;
+            }
+        }
+    }
+}
+
 let balance = deposit();  //if i use let i can change the value later
 const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
 const bet = getBet(balance, numberofLines);
