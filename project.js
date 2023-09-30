@@ -145,7 +145,7 @@ const game = () => {
     let balance = deposit();  //if i use let i can change the value later
 
     while (true) {
-        HTMLFormControlsCollection
+        console.log("You have a balanc of $" + balance);
         const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
         const bet = getBet(balance, numberofLines);
         balance -= bet* numberofLines;
@@ -157,6 +157,10 @@ const game = () => {
         const winnings = getWinnings(rows, bet, numberofLines);
         balance += winnings;
         console.log("YOU WON, $" + winnings.toString());
+        if(balance <= 0) {
+            console.log("You ran out of money!")
+            break
+        }
     }
 };
 
