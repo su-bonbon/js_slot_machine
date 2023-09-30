@@ -141,13 +141,15 @@ const getWinnings = (rows, bet, lines) => {
     return winnings;
 }
 
-let balance = deposit();  //if i use let i can change the value later
-const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
-const bet = getBet(balance, numberofLines);
-const reels = spin();
-const rows = transpose(reels);
-console.log(reels);
-console.log(rows);
-printRows(rows);
-const winnings = getWinnings(rows, bet, numberofLines);
-console.log("YOU WON, $" + winnings.toString());
+const game = () => {
+    let balance = deposit();  //if i use let i can change the value later
+    const numberofLines = getNumberofLines();  //if i use const i cannot change the value later
+    const bet = getBet(balance, numberofLines);
+    const reels = spin();
+    const rows = transpose(reels);
+    console.log(reels);
+    console.log(rows);
+    printRows(rows);
+    const winnings = getWinnings(rows, bet, numberofLines);
+    console.log("YOU WON, $" + winnings.toString());
+}
